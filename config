@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "upstream"]
+	url = <GITHUB_REPO>
+	fetch = +refs/heads/*:refs/remotes/upstream/*
+[remote "downstream"]
+	url = <DOWNSTREAM_REPO>
+	fetch = +refs/heads/*:refs/remotes/downstream/*
+[branch "master"]
+	remote = upstream
+	merge = refs/heads/master
